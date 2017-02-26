@@ -1,0 +1,6 @@
+
+
+github "huangboju/FDTemplateLayoutCell.swift"
+github "SnapKit/SnapKit" ~> 3.2.0
+github "SwiftyJSON/SwiftyJSON"
+github "dani-gavrilov/GDPerformanceView-Swift" ~> 1.1.2
