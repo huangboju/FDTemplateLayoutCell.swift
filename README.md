@@ -3,7 +3,7 @@
 # Overview
 It can be through the Auto layout and Frame layout way to obtain the height of the cell, and you can use the same key or indexpath way to cache the height of the cell
 
-![](https://github.com/huangboju/UITableView-FDTemplateLayoutCell.swift/blob/master/2017-02-24%2014_47_18.gif)
+![](https://github.com/huangboju/FDTemplateLayoutCell.swift/blob/master/2017-02-24%2014_47_18.gif)
 
 # Installation
 * CocoaPods
