@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FDTemplateLayoutCell.swift"
-  s.version      = "0.9.1"
+  s.version      = "0.9.0"
   s.summary      = "It is translation of the UITableView-FDTemplateLayoutCell by Swift"
   s.homepage     = "https://github.com/huangboju/FDTemplateLayoutCell.swift"
   s.license      = "MIT"
