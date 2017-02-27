@@ -2,6 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FDTemplateLayoutCell"
+  s.version      = "0.9.2"
   s.summary      = "It is translation of the UITableView-FDTemplateLayoutCell by Swift"
   s.homepage     = "https://github.com/huangboju/FDTemplateLayoutCell.swift"
   s.license      = "MIT"
@@ -11,4 +12,5 @@ Pod::Spec.new do |s|
   s.source_files  = "Classes/**/*.swift"
   s.framework  = "UIKit"
   s.requires_arc = true
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 end
