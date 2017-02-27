@@ -8,7 +8,7 @@ It can be through the Auto layout and Frame layout way to obtain the height of t
 # Installation
 * CocoaPods
 ```
-pod 'FDTemplateLayoutCell.swift'
+pod 'FDTemplateLayoutCell'
 ```
 
 * Carthage
