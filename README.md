@@ -115,5 +115,5 @@ If you find an issue, just open a ticket. Pull requests are warmly welcome as we
 
 ### License
 
-UITableView-FDTemplateLayoutCell.swift is released under the MIT license. See LICENSE for details.
+FDTemplateLayoutCell.swift is released under the MIT license. See LICENSE for details.
 
