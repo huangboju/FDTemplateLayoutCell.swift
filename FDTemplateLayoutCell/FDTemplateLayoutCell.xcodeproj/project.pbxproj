@@ -15,6 +15,23 @@
 		D81E283D1E630425006DD0C3 /* UITableView+FDTemplateLayoutCellDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E28381E630425006DD0C3 /* UITableView+FDTemplateLayoutCellDebug.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D83998EE1E6FAE38002861F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D83998E91E6FAE38002861F6 /* UITableView-FDTemplateLayoutCell.swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D81E275E1E603DB4006DD0C3;
+			remoteInfo = "UITableView-FDTemplateLayoutCell.swift";
+		};
+		D83998F01E6FAE38002861F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D83998E91E6FAE38002861F6 /* UITableView-FDTemplateLayoutCell.swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D81E27721E603DB4006DD0C3;
+			remoteInfo = "UITableView-FDTemplateLayoutCell.swiftUITests";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		D81E28281E63041C006DD0C3 /* FDTemplateLayoutCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDTemplateLayoutCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81E282B1E63041C006DD0C3 /* FDTemplateLayoutCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDTemplateLayoutCell.h; sourceTree = "<group>"; };
@@ -24,6 +41,7 @@
 		D81E28361E630425006DD0C3 /* UITableView+FDIndexPathHeightCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+FDIndexPathHeightCache.swift"; sourceTree = "<group>"; };
 		D81E28371E630425006DD0C3 /* UITableView+FDTemplateLayoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+FDTemplateLayoutCell.swift"; sourceTree = "<group>"; };
 		D81E28381E630425006DD0C3 /* UITableView+FDTemplateLayoutCellDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+FDTemplateLayoutCellDebug.swift"; sourceTree = "<group>"; };
+		D83998E91E6FAE38002861F6 /* UITableView-FDTemplateLayoutCell.swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "UITableView-FDTemplateLayoutCell.swift.xcodeproj"; path = "../Demo/UITableView-FDTemplateLayoutCell.swift.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +58,7 @@
 		D81E281E1E63041C006DD0C3 = {
 			isa = PBXGroup;
 			children = (
+				D83998E91E6FAE38002861F6 /* UITableView-FDTemplateLayoutCell.swift.xcodeproj */,
 				D81E282A1E63041C006DD0C3 /* FDTemplateLayoutCell */,
 				D81E28291E63041C006DD0C3 /* Products */,
 			);
@@ -74,6 +93,15 @@
 			);
 			name = Classes;
 			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+		D83998EA1E6FAE38002861F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D83998EF1E6FAE38002861F6 /* UITableView-FDTemplateLayoutCell.swift.app */,
+				D83998F11E6FAE38002861F6 /* UITableView-FDTemplateLayoutCell.swiftUITests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,12 +161,35 @@
 			mainGroup = D81E281E1E63041C006DD0C3;
 			productRefGroup = D81E28291E63041C006DD0C3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D83998EA1E6FAE38002861F6 /* Products */;
+					ProjectRef = D83998E91E6FAE38002861F6 /* UITableView-FDTemplateLayoutCell.swift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D81E28271E63041C006DD0C3 /* FDTemplateLayoutCell */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D83998EF1E6FAE38002861F6 /* UITableView-FDTemplateLayoutCell.swift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "UITableView-FDTemplateLayoutCell.swift.app";
+			remoteRef = D83998EE1E6FAE38002861F6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D83998F11E6FAE38002861F6 /* UITableView-FDTemplateLayoutCell.swiftUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UITableView-FDTemplateLayoutCell.swiftUITests.xctest";
+			remoteRef = D83998F01E6FAE38002861F6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D81E28261E63041C006DD0C3 /* Resources */ = {
@@ -322,6 +373,7 @@
 				D81E28321E63041C006DD0C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
