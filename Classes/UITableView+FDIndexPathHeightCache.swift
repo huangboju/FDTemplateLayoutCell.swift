@@ -57,7 +57,7 @@ extension UITableView {
             ]
 
             for selector in selectors {
-                let swizzledSelector = NSSelectorFromString("fd_" + selector.description)
+                let swizzledSelector = Selector("fd_" + selector.description)
                 let originalMethod = class_getInstanceMethod(self, selector)
                 let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
                 method_exchangeImplementations(originalMethod, swizzledMethod)
