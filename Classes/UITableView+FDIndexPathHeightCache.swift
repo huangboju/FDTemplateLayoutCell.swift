@@ -53,7 +53,7 @@ extension UITableView {
                 #selector(insertRows(at:with:)),
                 #selector(deleteRows(at:with:)),
                 #selector(reloadRows(at:with:)),
-                #selector(moveRow(at:to:))
+                #selector(moveRow(at:to:)),
             ]
 
             for selector in selectors {
@@ -67,7 +67,7 @@ extension UITableView {
 
     func fd_reloadData() {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
-            fd_indexPathHeightCache.enumerateAllOrientations(using: { (heightsBySection) in
+            fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
                 heightsBySection.removeAll()
             })
         }
@@ -79,7 +79,7 @@ extension UITableView {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             for section in sections {
                 fd_indexPathHeightCache.buildSectionsIfNeeded(section)
-                fd_indexPathHeightCache.enumerateAllOrientations(using: { (heightsBySection) in
+                fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
                     heightsBySection.insert([], at: section)
                 })
             }
@@ -91,7 +91,7 @@ extension UITableView {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             for section in sections {
                 fd_indexPathHeightCache.buildSectionsIfNeeded(section)
-                fd_indexPathHeightCache.enumerateAllOrientations(using: { (heightsBySection) in
+                fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
                     heightsBySection.remove(at: section)
                 })
             }
@@ -103,7 +103,7 @@ extension UITableView {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             for section in sections {
                 fd_indexPathHeightCache.buildSectionsIfNeeded(section)
-                fd_indexPathHeightCache.enumerateAllOrientations(using: { (heightsBySection) in
+                fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
                     heightsBySection[section].removeAll()
                 })
             }
@@ -114,7 +114,7 @@ extension UITableView {
     func fd_moveSection(_ section: Int, toSection newSection: Int) {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             fd_indexPathHeightCache.buildSectionsIfNeeded(section)
-            fd_indexPathHeightCache.enumerateAllOrientations(using: { (heightsBySection) in
+            fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
                 swap(&heightsBySection[section], &heightsBySection[newSection])
             })
         }
@@ -125,7 +125,7 @@ extension UITableView {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             fd_indexPathHeightCache.buildCachesAtIndexPathsIfNeeded(indexPaths)
             for indexPath in indexPaths {
-                fd_indexPathHeightCache.enumerateAllOrientations(using: { (heightsBySection) in
+                fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
                     heightsBySection[indexPath.section].insert(-1, at: indexPath.row)
                 })
             }
@@ -149,7 +149,7 @@ extension UITableView {
             }
 
             for (key, indexSet) in mutableIndexSetsToRemove {
-                fd_indexPathHeightCache.enumerateAllOrientations(using: { (heightsBySection) in
+                fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
                     heightsBySection[key].remove(at: indexSet)
                 })
             }
@@ -163,7 +163,7 @@ extension UITableView {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             fd_indexPathHeightCache.buildCachesAtIndexPathsIfNeeded(indexPaths)
             for indexPath in indexPaths {
-                fd_indexPathHeightCache.enumerateAllOrientations(using: { (heightsBySection) in
+                fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
                     heightsBySection[indexPath.section][indexPath.row] = -1
                 })
             }
@@ -174,7 +174,7 @@ extension UITableView {
     func fd_moveRow(at indexPath: IndexPath, to newIndexPath: IndexPath) {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             fd_indexPathHeightCache.buildCachesAtIndexPathsIfNeeded([indexPath, newIndexPath])
-            fd_indexPathHeightCache.enumerateAllOrientations(using: { (heightsBySection) in
+            fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
                 var sourceRows = heightsBySection[indexPath.section]
                 var destinationRows = heightsBySection[newIndexPath.section]
                 let sourceValue = sourceRows[indexPath.row]

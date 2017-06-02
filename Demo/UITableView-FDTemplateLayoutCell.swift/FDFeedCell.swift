@@ -67,34 +67,34 @@ class FDFeedCell: UITableViewCell {
         contentView.addSubview(usernameLabel)
         contentView.addSubview(timeLabel)
 
-        titleLabel.snp.makeConstraints { (make) in
+        titleLabel.snp.makeConstraints { make in
             make.leading.equalTo(padding)
             make.trailing.equalTo(10)
             make.top.equalTo(10)
         }
 
-        usernameLabel.snp.makeConstraints { (make) in
+        usernameLabel.snp.makeConstraints { make in
             make.bottom.equalTo(-4)
             make.leading.equalTo(titleLabel.snp.leading)
         }
 
-        contentLabel.snp.makeConstraints { (make) in
+        contentLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(6)
             make.trailing.leading.equalTo(titleLabel)
         }
 
-        timeLabel.snp.makeConstraints { (make) in
+        timeLabel.snp.makeConstraints { make in
             make.lastBaseline.equalTo(usernameLabel)
             make.trailing.equalTo(10)
         }
 
-        contentImageView.snp.makeConstraints { (make) in
+        contentImageView.snp.makeConstraints { make in
             make.leading.equalTo(titleLabel.snp.leading)
             make.top.equalTo(contentLabel.snp.bottom).offset(8)
         }
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5CB0A469741245D212F457AD62FF580214771838",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F7D4F0E2729FC0BEB9BF64D1D6783197B2E1B40F" : 9223372036854775807,
+    "5CB0A469741245D212F457AD62FF580214771838" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DA39E122-F8A8-4682-BF6E-8455E12B5440",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F7D4F0E2729FC0BEB9BF64D1D6783197B2E1B40F" : "MTPopup\/",
+    "5CB0A469741245D212F457AD62FF580214771838" : "FDTemplateLayoutCell.swift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "UITableView-FDTemplateLayoutCell.swift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Demo\/UITableView-FDTemplateLayoutCell.swift.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/huangboju\/FDTemplateLayoutCell.swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5CB0A469741245D212F457AD62FF580214771838"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/huangboju\/MTPopup.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F7D4F0E2729FC0BEB9BF64D1D6783197B2E1B40F"
+    }
+  ]
+}
