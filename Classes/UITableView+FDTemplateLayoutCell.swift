@@ -21,7 +21,7 @@ extension UITableView {
         .checkmark: 40,
         .detailButton: 48,
         ]
-    
+
     // [bug fix] after iOS 10.3, Auto Layout engine will add an additional 0 width constraint onto cell's content view, to avoid that, we add constraints to content view's left, right, top and bottom.
     private static let isSystemVersionEqualOrGreaterThen10_2 = (Double(UIDevice.current.systemVersion) ?? 0) >= 10.2
 
