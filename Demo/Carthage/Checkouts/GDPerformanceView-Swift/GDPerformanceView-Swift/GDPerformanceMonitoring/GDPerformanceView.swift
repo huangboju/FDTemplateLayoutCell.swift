@@ -1,5 +1,5 @@
 //
-// Copyright © 2016 Gavrilov Daniil
+// Copyright © 2017 Gavrilov Daniil
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ internal class GDPerformanceView: UIWindow {
     
     private var screenUpdatesBeginTime: CFTimeInterval = 0.0
     
-    private var averageScreenUpdatesTime: CFTimeInterval = 0.017
+    private var averageScreenUpdatesTime: CFTimeInterval = 0.018
     
     private var versionsString: String = ""
     
@@ -235,7 +235,10 @@ internal class GDPerformanceView: UIWindow {
                 let updatesOverSecond = screenUpdatesTime - 1.0
                 let framesOverSecond = Int(updatesOverSecond / self.averageScreenUpdatesTime)
                 
-                self.screenUpdatesCount -= framesOverSecond;
+                self.screenUpdatesCount -= framesOverSecond
+                if self.screenUpdatesCount < 0 {
+                    self.screenUpdatesCount = 0
+                }
                 
                 self.takeReadings()
             }
@@ -268,9 +271,15 @@ internal class GDPerformanceView: UIWindow {
         var threadStatistic: UInt32 = 0
         
         kern = withUnsafeMutablePointer(to: &threadList) {
-            $0.withMemoryRebound(to: (thread_act_array_t?.self)!, capacity: 1) {
-                task_threads(mach_task_self_, $0, &threadCount)
-            }
+            #if swift(>=3.1)
+                return $0.withMemoryRebound(to: thread_act_array_t?.self, capacity: 1) {
+                    task_threads(mach_task_self_, $0, &threadCount)
+                }
+            #else
+                return $0.withMemoryRebound(to: (thread_act_array_t?.self)!, capacity: 1) {
+                    task_threads(mach_task_self_, $0, &threadCount)
+                }
+            #endif
         }
         if kern != KERN_SUCCESS {
             return -1
@@ -319,7 +328,7 @@ internal class GDPerformanceView: UIWindow {
     }
     
     private func updateMonitoringLabel(fpsUsage: Int, cpuUsage: Float) {
-        let monitoringString = String(format: "FPS : %d; CPU : %.1f%%", fpsUsage, cpuUsage)
+        let monitoringString = String(format: "FPS : %d CPU : %.1f%%", fpsUsage, cpuUsage)
         
         self.monitoringTextLabel.text = monitoringString + self.versionsString
         self.layoutTextLabel()
@@ -354,14 +363,14 @@ internal class GDPerformanceView: UIWindow {
             let systemVersion = UIDevice.current.systemVersion
             
             if !self.appVersionHidden && !self.deviceVersionHidden {
-                versionsString = "\napp v\(applicationVersion) (\(applicationBuild)); iOS v\(systemVersion)"
+                versionsString = "\napp v\(applicationVersion) (\(applicationBuild)) iOS v\(systemVersion)"
             } else if !self.appVersionHidden {
                 versionsString = "\napp v\(applicationVersion) (\(applicationBuild))"
             } else if !self.deviceVersionHidden {
                 versionsString = "\niOS v\(systemVersion)"
             }
         } else {
-            self.versionsString = "";
+            self.versionsString = ""
         }
     }
     

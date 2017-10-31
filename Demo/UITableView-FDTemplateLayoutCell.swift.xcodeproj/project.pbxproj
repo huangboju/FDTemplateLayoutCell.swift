@@ -16,14 +16,8 @@
 		D81E27851E603EEE006DD0C3 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D81E27821E603EEE006DD0C3 /* data.json */; };
 		D81E27861E603EEE006DD0C3 /* FDFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E27831E603EEE006DD0C3 /* FDFeedCell.swift */; };
 		D81E27871E603EEE006DD0C3 /* FDFeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E27841E603EEE006DD0C3 /* FDFeedEntity.swift */; };
-		D81E283E1E630800006DD0C3 /* GDPerformanceView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27941E603F2D006DD0C3 /* GDPerformanceView.framework */; };
-		D81E283F1E630800006DD0C3 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27951E603F2D006DD0C3 /* SnapKit.framework */; };
-		D81E28401E630800006DD0C3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27961E603F2D006DD0C3 /* SwiftyJSON.framework */; };
 		D81E28421E630800006DD0C3 /* FDTemplateLayoutCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E28411E630800006DD0C3 /* FDTemplateLayoutCell.framework */; };
 		D81E28441E630806006DD0C3 /* FDTemplateLayoutCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D81E28411E630800006DD0C3 /* FDTemplateLayoutCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D81E28461E630806006DD0C3 /* GDPerformanceView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27941E603F2D006DD0C3 /* GDPerformanceView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D81E28481E630806006DD0C3 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27951E603F2D006DD0C3 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D81E284A1E630806006DD0C3 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27961E603F2D006DD0C3 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D81E284A1E630806006DD0C3 /* SwiftyJSON.framework in Embed Frameworks */,
-				D81E28481E630806006DD0C3 /* SnapKit.framework in Embed Frameworks */,
 				D81E28441E630806006DD0C3 /* FDTemplateLayoutCell.framework in Embed Frameworks */,
-				D81E28461E630806006DD0C3 /* GDPerformanceView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,9 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81E28421E630800006DD0C3 /* FDTemplateLayoutCell.framework in Frameworks */,
-				D81E283E1E630800006DD0C3 /* GDPerformanceView.framework in Frameworks */,
-				D81E283F1E630800006DD0C3 /* SnapKit.framework in Frameworks */,
-				D81E28401E630800006DD0C3 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
