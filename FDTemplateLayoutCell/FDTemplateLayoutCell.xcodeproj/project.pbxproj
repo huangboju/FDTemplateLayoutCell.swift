@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEBE4A321FADE65400A9CA9A /* UIViewController+Cache.h in Headers */ = {isa = PBXBuildFile; fileRef = BEBE4A301FADE65400A9CA9A /* UIViewController+Cache.h */; };
+		BEBE4A331FADE65400A9CA9A /* UIViewController+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBE4A311FADE65400A9CA9A /* UIViewController+Cache.m */; };
 		D81E282D1E63041C006DD0C3 /* FDTemplateLayoutCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D81E282B1E63041C006DD0C3 /* FDTemplateLayoutCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D81E28391E630425006DD0C3 /* FDIndexPathHeightCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E28341E630425006DD0C3 /* FDIndexPathHeightCache.swift */; };
 		D81E283A1E630425006DD0C3 /* FDKeyedHeightCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E28351E630425006DD0C3 /* FDKeyedHeightCache.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEBE4A301FADE65400A9CA9A /* UIViewController+Cache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Cache.h"; sourceTree = "<group>"; };
+		BEBE4A311FADE65400A9CA9A /* UIViewController+Cache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Cache.m"; sourceTree = "<group>"; };
 		D81E28281E63041C006DD0C3 /* FDTemplateLayoutCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDTemplateLayoutCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81E282B1E63041C006DD0C3 /* FDTemplateLayoutCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDTemplateLayoutCell.h; sourceTree = "<group>"; };
 		D81E282C1E63041C006DD0C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				D81E28361E630425006DD0C3 /* UITableView+FDIndexPathHeightCache.swift */,
 				D81E28371E630425006DD0C3 /* UITableView+FDTemplateLayoutCell.swift */,
 				D81E28381E630425006DD0C3 /* UITableView+FDTemplateLayoutCellDebug.swift */,
+				BEBE4A301FADE65400A9CA9A /* UIViewController+Cache.h */,
+				BEBE4A311FADE65400A9CA9A /* UIViewController+Cache.m */,
 			);
 			name = Classes;
 			path = ../../Classes;
@@ -111,6 +117,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBE4A321FADE65400A9CA9A /* UIViewController+Cache.h in Headers */,
 				D81E282D1E63041C006DD0C3 /* FDTemplateLayoutCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,11 +149,12 @@
 		D81E281F1E63041C006DD0C3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "伯驹 黄";
 				TargetAttributes = {
 					D81E28271E63041C006DD0C3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -209,6 +217,7 @@
 				D81E283A1E630425006DD0C3 /* FDKeyedHeightCache.swift in Sources */,
 				D81E283C1E630425006DD0C3 /* UITableView+FDTemplateLayoutCell.swift in Sources */,
 				D81E28391E630425006DD0C3 /* FDIndexPathHeightCache.swift in Sources */,
+				BEBE4A331FADE65400A9CA9A /* UIViewController+Cache.m in Sources */,
 				D81E283B1E630425006DD0C3 /* UITableView+FDIndexPathHeightCache.swift in Sources */,
 				D81E283D1E630425006DD0C3 /* UITableView+FDTemplateLayoutCellDebug.swift in Sources */,
 			);
@@ -226,7 +235,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -234,7 +245,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -279,7 +294,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -287,7 +304,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -319,6 +340,7 @@
 		D81E28311E63041C006DD0C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,13 +353,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangboju.FDTemplateLayoutCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		D81E28321E63041C006DD0C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -350,7 +375,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangboju.FDTemplateLayoutCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

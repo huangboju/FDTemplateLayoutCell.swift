@@ -41,30 +41,6 @@ extension UITableView {
 
     static let _onceToken = UUID().uuidString
 
-    open override class func initialize() {
-
-        DispatchQueue.once(token: _onceToken) {
-            let selectors = [
-                #selector(reloadData),
-                #selector(insertSections(_:with:)),
-                #selector(deleteSections(_:with:)),
-                #selector(reloadSections(_:with:)),
-                #selector(moveSection(_:toSection:)),
-                #selector(insertRows(at:with:)),
-                #selector(deleteRows(at:with:)),
-                #selector(reloadRows(at:with:)),
-                #selector(moveRow(at:to:)),
-            ]
-
-            for selector in selectors {
-                let swizzledSelector = Selector("fd_" + selector.description)
-                let originalMethod = class_getInstanceMethod(self, selector)
-                let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
-                method_exchangeImplementations(originalMethod, swizzledMethod)
-            }
-        }
-    }
-
     func fd_reloadData() {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
@@ -115,7 +91,7 @@ extension UITableView {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             fd_indexPathHeightCache.buildSectionsIfNeeded(section)
             fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
-                swap(&heightsBySection[section], &heightsBySection[newSection])
+                heightsBySection.swapAt(section, newSection)
             })
         }
         fd_moveSection(section, toSection: newSection)
@@ -202,8 +178,8 @@ extension Array {
         get {
             return self[index]
         }
-        set(newElm) {
-            insert(newElm, at: index)
+        set {
+            insert(newValue, at: index)
         }
     }
 }
