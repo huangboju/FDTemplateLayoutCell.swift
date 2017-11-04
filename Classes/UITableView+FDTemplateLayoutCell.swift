@@ -63,7 +63,7 @@ extension UITableView {
             var edgeConstraints: [NSLayoutConstraint] = []
             if UITableView.isSystemVersionEqualOrGreaterThen10_2 {
                 // To avoid confilicts, make width constraint softer than required (1000)
-                widthFenceConstraint.priority = UILayoutPriority(rawValue: UILayoutPriority.RawValue(Int(UILayoutPriority.required.rawValue) - 1))
+                widthFenceConstraint.priority = UILayoutPriority(rawValue: UILayoutPriority.required.rawValue - 1)
 
                 // Build edge constraints
                 let leftConstraint = NSLayoutConstraint(item: cell.contentView, attribute: .left, relatedBy: .equal, toItem: cell, attribute: .left, multiplier: 1, constant: 0)
@@ -74,7 +74,7 @@ extension UITableView {
                 edgeConstraints = [leftConstraint, rightConstraint, topConstraint, bottomConstraint]
                 cell.addConstraints(edgeConstraints)
             }
-            
+
             cell.contentView.addConstraint(widthFenceConstraint)
 
             // Auto layout engine does its math
