@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEBE4A351FADEA0C00A9CA9A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27951E603F2D006DD0C3 /* SnapKit.framework */; };
+		BEBE4A371FADEA1200A9CA9A /* GDPerformanceView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27941E603F2D006DD0C3 /* GDPerformanceView.framework */; };
+		BEBE4A381FADEA1200A9CA9A /* GDPerformanceView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27941E603F2D006DD0C3 /* GDPerformanceView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEBE4A3A1FADEA1200A9CA9A /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27951E603F2D006DD0C3 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEBE4A3B1FADEA1200A9CA9A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27961E603F2D006DD0C3 /* SwiftyJSON.framework */; };
+		BEBE4A3C1FADEA1200A9CA9A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D81E27961E603F2D006DD0C3 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D81E27621E603DB4006DD0C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E27611E603DB4006DD0C3 /* AppDelegate.swift */; };
 		D81E27641E603DB4006DD0C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E27631E603DB4006DD0C3 /* ViewController.swift */; };
 		D81E27671E603DB4006DD0C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81E27651E603DB4006DD0C3 /* Main.storyboard */; };
@@ -37,7 +43,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BEBE4A3C1FADEA1200A9CA9A /* SwiftyJSON.framework in Embed Frameworks */,
+				BEBE4A3A1FADEA1200A9CA9A /* SnapKit.framework in Embed Frameworks */,
 				D81E28441E630806006DD0C3 /* FDTemplateLayoutCell.framework in Embed Frameworks */,
+				BEBE4A381FADEA1200A9CA9A /* GDPerformanceView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBE4A351FADEA0C00A9CA9A /* SnapKit.framework in Frameworks */,
+				BEBE4A3B1FADEA1200A9CA9A /* SwiftyJSON.framework in Frameworks */,
+				BEBE4A371FADEA1200A9CA9A /* GDPerformanceView.framework in Frameworks */,
 				D81E28421E630800006DD0C3 /* FDTemplateLayoutCell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,10 +203,12 @@
 				TargetAttributes = {
 					D81E275D1E603DB4006DD0C3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					D81E27711E603DB4006DD0C3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D81E275D1E603DB4006DD0C3;
 					};
@@ -407,7 +421,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huangboju.UITableView-FDTemplateLayoutCell-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UITableView-FDTemplateLayoutCell.swift/Bridging.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -425,7 +440,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huangboju.UITableView-FDTemplateLayoutCell-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UITableView-FDTemplateLayoutCell.swift/Bridging.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -437,7 +453,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huangboju.UITableView-FDTemplateLayoutCell-swiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "UITableView-FDTemplateLayoutCell.swift";
 			};
 			name = Debug;
@@ -450,7 +467,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huangboju.UITableView-FDTemplateLayoutCell-swiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "UITableView-FDTemplateLayoutCell.swift";
 			};
 			name = Release;

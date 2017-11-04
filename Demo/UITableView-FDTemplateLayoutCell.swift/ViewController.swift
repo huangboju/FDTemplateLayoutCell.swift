@@ -42,11 +42,11 @@ class ViewController: UITableViewController {
         return toolBar
     }()
 
-    func selectedChange() {
+    @objc func selectedChange() {
         tableView.reloadData()
     }
 
-    func performAction() {
+    @objc func performAction() {
         perform(Selector(actionControl.selectedTitle ?? ""), with: self)
     }
 
