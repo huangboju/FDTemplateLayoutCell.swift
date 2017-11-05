@@ -23,11 +23,13 @@ extension UITableView {
         ]
 
     // [bug fix] after iOS 10.3, Auto Layout engine will add an additional 0 width constraint onto cell's content view, to avoid that, we add constraints to content view's left, right, top and bottom.
-    private static let isSystemVersionEqualOrGreaterThen10_2 = (Double(UIDevice.current.systemVersion) ?? 0) >= 10.2
+    private var isSystemVersionEqualOrGreaterThen10_2: Bool {
+        return UIDevice.current.systemVersion.compare("10.2", options: .numeric) == .orderedDescending
+    }
 
     func fd_systemFittingHeightForConfiguratedCell(_ cell: UITableViewCell) -> CGFloat {
         var contentViewWidth = frame.width
-        
+
         var cellBounds = cell.bounds
         cellBounds.size.width = contentViewWidth
         cell.bounds = cellBounds
@@ -61,7 +63,7 @@ extension UITableView {
 
             
             var edgeConstraints: [NSLayoutConstraint] = []
-            if UITableView.isSystemVersionEqualOrGreaterThen10_2 {
+            if isSystemVersionEqualOrGreaterThen10_2 {
                 // To avoid confilicts, make width constraint softer than required (1000)
                 widthFenceConstraint.priority = UILayoutPriority(rawValue: UILayoutPriority.required.rawValue - 1)
 
@@ -82,7 +84,7 @@ extension UITableView {
 
             // Clean-ups
             cell.contentView.removeConstraint(widthFenceConstraint)
-            if UITableView.isSystemVersionEqualOrGreaterThen10_2 {
+            if isSystemVersionEqualOrGreaterThen10_2 {
                 cell.removeConstraints(edgeConstraints)
             }
             fd_debugLog("calculate using system fitting size (AutoLayout) -\(fittingHeight)")

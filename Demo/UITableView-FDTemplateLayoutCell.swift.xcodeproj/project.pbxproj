@@ -27,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BEBE4A451FAEA69400A9CA9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEBE4A401FAEA69400A9CA9A /* FDTemplateLayoutCell.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D81E28281E63041C006DD0C3;
+			remoteInfo = FDTemplateLayoutCell;
+		};
 		D81E27731E603DB4006DD0C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D81E27561E603DB4006DD0C3 /* Project object */;
@@ -54,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BEBE4A401FAEA69400A9CA9A /* FDTemplateLayoutCell.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FDTemplateLayoutCell.xcodeproj; path = ../FDTemplateLayoutCell/FDTemplateLayoutCell.xcodeproj; sourceTree = "<group>"; };
 		D81E275E1E603DB4006DD0C3 /* UITableView-FDTemplateLayoutCell.swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITableView-FDTemplateLayoutCell.swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81E27611E603DB4006DD0C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D81E27631E603DB4006DD0C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,9 +104,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEBE4A411FAEA69400A9CA9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEBE4A461FAEA69400A9CA9A /* FDTemplateLayoutCell.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D81E27551E603DB4006DD0C3 = {
 			isa = PBXGroup;
 			children = (
+				BEBE4A401FAEA69400A9CA9A /* FDTemplateLayoutCell.xcodeproj */,
 				D81E27601E603DB4006DD0C3 /* UITableView-FDTemplateLayoutCell.swift */,
 				D81E27751E603DB4006DD0C3 /* UITableView-FDTemplateLayoutCell.swiftUITests */,
 				D81E275F1E603DB4006DD0C3 /* Products */,
@@ -225,6 +242,12 @@
 			mainGroup = D81E27551E603DB4006DD0C3;
 			productRefGroup = D81E275F1E603DB4006DD0C3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BEBE4A411FAEA69400A9CA9A /* Products */;
+					ProjectRef = BEBE4A401FAEA69400A9CA9A /* FDTemplateLayoutCell.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D81E275D1E603DB4006DD0C3 /* UITableView-FDTemplateLayoutCell.swift */,
@@ -232,6 +255,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BEBE4A461FAEA69400A9CA9A /* FDTemplateLayoutCell.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FDTemplateLayoutCell.framework;
+			remoteRef = BEBE4A451FAEA69400A9CA9A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D81E275C1E603DB4006DD0C3 /* Resources */ = {
