@@ -14,13 +14,15 @@ extension UITableView {
         static var fd_heightForHeaderFooterView = "fd_heightForHeaderFooterView"
     }
 
-    private static let systemAccessoryWidths: [UITableViewCellAccessoryType: CGFloat] = [
-        .none: 0,
-        .disclosureIndicator: 34,
-        .detailDisclosureButton: 68,
-        .checkmark: 40,
-        .detailButton: 48,
+    private var systemAccessoryWidths: [UITableViewCellAccessoryType: CGFloat] {
+        return [
+            .none: 0,
+            .disclosureIndicator: 34,
+            .detailDisclosureButton: 68,
+            .checkmark: 40,
+            .detailButton: 48,
         ]
+    }
 
     // [bug fix] after iOS 10.3, Auto Layout engine will add an additional 0 width constraint onto cell's content view, to avoid that, we add constraints to content view's left, right, top and bottom.
     private var isSystemVersionEqualOrGreaterThen10_2: Bool {
@@ -42,7 +44,7 @@ extension UITableView {
             // 16为系统cell左边的空隙
             accessroyWidth = 16 + accessoryView.frame.width
         } else {
-            accessroyWidth = UITableView.systemAccessoryWidths[cell.accessoryType] ?? 0
+            accessroyWidth = systemAccessoryWidths[cell.accessoryType] ?? 0
         }
         contentViewWidth -= accessroyWidth
 
