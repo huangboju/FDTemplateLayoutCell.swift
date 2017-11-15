@@ -113,6 +113,6 @@ class FDFeedCell: UITableViewCell {
 
 extension String {
     var length: Int {
-        return characters.count
+        return count
     }
 }

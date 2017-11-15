@@ -39,8 +39,6 @@ extension UITableView {
         fd_reloadData()
     }
 
-    static let _onceToken = UUID().uuidString
-
     func fd_reloadData() {
         if fd_indexPathHeightCache.automaticallyInvalidateEnabled {
             fd_indexPathHeightCache.enumerateAllOrientations(using: { heightsBySection in
